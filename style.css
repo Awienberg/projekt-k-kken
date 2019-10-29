@@ -111,7 +111,7 @@ button {
 }
 
 #om {
-  background-color: #9B9B9B;
+  background-color: #333;
 } 
 
 #design {
@@ -213,7 +213,7 @@ input[type="submit"] {
   text-align: center;
 }
 
-#myBtn {
+#top {
   display: none;
   position: fixed;
   bottom: 20px;
@@ -221,7 +221,7 @@ input[type="submit"] {
   z-index: 99;
   border: none;
   outline: none;
-  background-color: #333;
+  background-color: #000;
   color: #fff;
   cursor: pointer;
   padding: 5px;
