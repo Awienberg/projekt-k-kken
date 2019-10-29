@@ -1,0 +1,268 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.header {
+  text-align: left;
+  padding: 10px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.05);
+
+}
+
+.nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+.before {
+  background-color: #fff;
+  height: 100px;
+}
+
+.headerImage {
+  background-image: url("img/cover.png"); 
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+button {
+  border: none;
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  height: 45px;
+  width: 150px;
+  text-align: center;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 500px; /* Should be removed. Only for demonstration */
+}
+
+.left {
+  width: 50%;
+  background-color: #333;
+  background-image: url("img/1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.left2 {
+  width: 50%;
+  background-color: #333;
+  background-image: url("img/2.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.left3 {
+  width: 50%;
+  background-color: #333;
+  background-image: url("img/3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.left4 {
+  width: 50%;
+  background-color: #333;
+  background-image: url("img/4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.right {
+  max-width: 50%;
+  padding: 150px 75px 150px 75px;
+  line-height: 2em;
+}
+
+.right2 {
+  max-width: 50%;
+  background-color: #D8D8D8;
+  padding: 150px 75px 150px 75px;
+  text-align: justify;
+  line-height: 2em; 
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+#om {
+  background-color: #9B9B9B;
+} 
+
+#design {
+  height: 400px;
+  background-image: url("img/plan.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clear: both;
+}
+
+#kontakt {
+ height: 550px;
+ background-color: #333;
+}
+
+#bygKøkken {
+  background-color: #333;
+  color: #fff;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #333;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+h1 a {
+    text-decoration: none;
+	  font-size: 30px;
+  	color: #333;
+    text-align: left;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+h2 {
+  font-size: 35px;
+  color: #fff;
+  height: 150px; 
+  padding-top: 50px;
+  text-align: center;
+}
+
+h3 {
+  padding: 10px;
+  color: #333;
+  font-size: 20px;
+  text-align: center;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  height: 100%;
+  width : 100%;
+  margin: 0px;
+  text-align: center;
+  background-color: #fff;
+}
+
+p {
+  padding-bottom: 10px;
+  color: #333;
+  font-size: 20px;
+  text-align: left;
+}
+
+.form {
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 200px;
+  height: 50px;
+  border: none; 
+  padding: 10px;
+  margin: 5px;
+}
+
+textarea {
+  width: 415px;
+  height: 200px;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+}
+input[type="submit"] {
+  border: none;
+  padding: 10px;
+  background-color: #fff;
+  color: #333;
+  height: 45px;
+  width: 150px;
+  text-align: center;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 20px; 
+  width: 50px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+#btnTop {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 20px; 
+    width: 200px;
+    margin-top: 200px;
+  }
+
+  #btnBot {
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 20px; 
+    width: 200px;
+    margin-top: 150px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }
+
+footer {
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+}
