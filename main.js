@@ -5,31 +5,30 @@ var $ = function (foo) {
     return document.getElementById(foo);
 };
 
-//Create Room
-//var createNewCanvas = $("create");
-
-//var enterCanvasWidth = $("width");
-
-//var enterCanvasHeight = $("heigh");  
-
 //Byg rum
-    //function createRoom() {
-    
-    //var enterCanvasWidthh = enterCanvasWidth.value;
-    
-    //var enterCanvasHeightt = enterCanvasHeight.value;
-        
-    //var newCanvas = $("myCanvas1");
-    //document.createElement("canvas");
-    //newCanvas.classList.add("canvasDesign");
+var createNewCanvas = $("create");
 
-    //newCanvas.style.width = enterCanvasWidthh + "px";
-    //newCanvas.style.height = enterCanvasHeightt + "px";
-        
-    //document.body.appendChild(newCanvas);
-//}
+function createRoom() {
+  
 
-//createNewCanvas.addEventListener('click', createRoom);
+let d1 = document.createElement('div'); // create table row in html
+let canvas1 = document.createElement('canvas'); // creates the table data
+let width = $("width").value;
+let height = $("height").value;
+        
+d1.appendChild(canvas1); // input table content
+canvas1.setAttribute('id', 'myCanvas'); // input table data in to a row
+canvas1.setAttribute('width', width); // change varible
+canvas1.setAttribute('height', height);
+$('myCanvas1').appendChild(canvas1); // input to table in html file
+    
+};
+
+function reset() {
+let element = $('myCanvas');
+element.parentNode.removeChild(element);
+$('dimensions').reset();
+};
 
 // Canvas Object
 let Canvas = {
@@ -78,13 +77,12 @@ let Shape = {
         this.x += dx;
         this.y += dy;
     }
-}
+};
 
 //Create Canvas & Shapes
 let initialize = function () {
     // create canvas object
-    mycv1 = Object.create(Canvas);
-    mycv1.init('myCanvas1', 'transparent');
+    mycv1 = $('myCanvas');
     mycv2 = Object.create(Canvas);
     mycv2.init('myCanvas2', '#D8D8D8');
     mycv2.canvas.addEventListener('click', select);
@@ -106,7 +104,6 @@ let initialize = function () {
 }
 
 let redraw = function (cv, arr) {
-    /* clear and redraw canvas from an array */
     cv.clear();
     cv.prep();
     for (var i = 0; i < arr.length; i++) {
@@ -115,9 +112,6 @@ let redraw = function (cv, arr) {
 }
 
 let repeater = function (cv, arr) {
-    /* if this is an animation build a setInterval loop here
-     * if not, just draw
-     */
     redraw(cv, arr);
 }
 
@@ -151,8 +145,7 @@ let select = function (ev) {
                     mycv1.canvas.removeEventListener('click', placeInRoom);
                     mycv2.canvas.addEventListener('click', select);
                 });
-        } else {
-            // window.alert("nohit: "+x+","+y);
+        
         }
     }
 }
