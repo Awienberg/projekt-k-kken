@@ -1,27 +1,29 @@
 'use strict';
 
-//Canvas Object
-let Canvas = {
-    init(canvasId, color) {
-        this.canvas = $(canvasId);
-        this.context = this.canvas.getContext("2d");
-        this.color = color;
-        this.prep();
-    },
-    prep() {
-        this.context.fillStyle = this.color;
-        this.context.fillRect(0, 0, this.canvas.width, this.canvas.height);
-    },
-    clear() {
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    },
-    getContext() {
-        return this.context;
-    },
-    getHeight() {
-        return this.canvas.height;
-    },
-    getWidth() {
-        return this.canvas.width;
-    }
-};
+//Get element by id
+var $ = function (foo) {
+    return document.getElementById(foo);
+}
+
+var createNewCanvas = $("create");
+var enterCanvasHeight = $("height");
+var enterCanvasWidth = $("width");
+
+//Byg rum
+function createRoom() {
+    var enterCanvasHeightt = enterCanvasHeight.value;
+    var enterCanvasWidthh = enterCanvasWidth.value;
+    document.body.innerHTML = enterCanvasHeightt+":"+enterCanvasWidthh;
+    
+    var newCanvas = $("myCanvas1");
+    document.createElement("canvas");
+    newCanvas.classList.add("canvasDesign");
+
+    newCanvas.style.height = enterCanvasHeightt + "px";
+    newCanvas.style.width = enterCanvasWidthh + "px";
+
+
+    document.body.appendChild(newCanvas);
+}
+
+createNewCanvas.addEventListener('click', createRoom);

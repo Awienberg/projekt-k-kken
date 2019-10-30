@@ -277,6 +277,12 @@ input[type="submit"] {
     padding: 30px 215px 0px 215px;
   }
 
+  .canvasDesign {
+    border: 1px solid #ccc;
+    background-color: #fff;
+  }
+  
+
   #width {
   border: 1px solid #333;
   padding: 10px;
@@ -313,7 +319,7 @@ input[type="submit"] {
   margin-right: 5px;
   }
 
-  #pris {
+  #price {
     border: none;
     padding: 10px;
     background-color: #333;
