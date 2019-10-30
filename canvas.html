@@ -4,7 +4,7 @@
     <title>H·A·R Kvalitets køkkener</title>
     <meta charset='utf-8'/>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap"   rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <script src='main.js'></script>
 </head>
     
@@ -31,7 +31,7 @@
       function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
-      }
+      };
       </script>
 
   <div class="header">
@@ -50,8 +50,10 @@
   <div class="content">
     <h3>Byg dit køkken</h3>
     <div id="canvas">
-      <div id="myCanvas1"></div>
-        <canvas id="myCanvas2" width="300" height="400" 
+      <canvas id="myCanvas1" width="800" height="400" 
+        style="outline: 1px solid #ccc;">
+      </canvas>
+      <canvas id="myCanvas2" width="300" height="400" 
                 style="outline: 1px solid #333;">
       </canvas>
     </div>
@@ -62,8 +64,8 @@
       <input type="number" placeholder="Bredde i cm" id="width">
       <input type="number" placeholder="Højde i cm" id="height">
       
-      <button id="create" value="create" onclick="">Byg rum</button>
-      
+      <button id="create" onclick="createRoom()">Byg rum</button>
+
       <button id="price" onclick="">Se samlet pris</button>
   </div>
 
