@@ -155,8 +155,10 @@ let select = function (ev) {
 function overlap() {
 
 };
+
+
 //pris
-let elementer = [ {
+/*let elementer = [ {
     name: 'elem40',
     pris: 3000,
 },
@@ -172,11 +174,11 @@ let elementer = [ {
     name: 'elem2',
     pris: 0,
 },
-];
+]; */
 
 //se samlet pris
 function total() {
-   $('total').innerHTML = 'hej det her lort virker ikke';
+   $('total').innerHTML = 'Total: Her skulle den totale sum af elementer stå';
 }
 
 let mycv1;
