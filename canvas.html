@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
     <script src='main.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.4.0/fabric.min.js'></script>
 </head>
     
 <body>
@@ -66,10 +67,15 @@
           <input type="button" id="create" value="Byg rum" onclick="createRoom()"></input>
           <input type="button" id="remove" value="Reset rum" onclick="reset()"></input>
           
-          <button id="price" onclick="">Se samlet pris</button>
+          <input type="button" id="price" value="Se samlet pris" onclick="total()"></input>
+          
+          <div id="prisOversigt">
+            <h3>Pris oversigt</h3>
+            <div id="total"></div>
+          </div>
+
   </div>
 
-  <footer>
       <h3>&copy; H·A·R</h3>
   </footer>
 

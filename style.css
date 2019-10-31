@@ -351,6 +351,18 @@ input[type="submit"] {
     cursor: pointer;
     }
 
+  #prisOversigt {
+    border: 1px solid #333;
+    height: 400px;
+    width: 500px;
+    margin-top: 80px;
+    clear: both;  
+  }
+  
+  #prisOversigt h3 {
+    text-align: left;
+  }
+
 footer {
   height: 50px;
   background-color: #fff;

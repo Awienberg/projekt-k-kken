@@ -59,13 +59,15 @@ let Canvas = {
 
 // Shape Object
 let Shape = {
-    init(cv, x, y, width, height, color) {
+    init(cv, x, y, width, height, color, name, pris) {
         this.ctx = cv.context;
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
         this.color = color;
+        this.name = name;
+        this.pris = pris;
     },
 
     draw() {
@@ -88,13 +90,13 @@ let initialize = function () {
     // create objects
     // put in array
     let shape1 = Object.create(Shape);
-    shape1.init(mycv2, 240, 40, 40, 60, '#333'); //0
+    shape1.init(mycv2, 240, 40, 40, 60, '#333', 'elem40', 3000); //0
     var shape2 = Object.create(Shape);
-    shape2.init(mycv2, 220, 110, 60, 60, '#333'); //1
+    shape2.init(mycv2, 220, 110, 60, 60, '#333', 'elem60', 6000); //1
     var shape3 = Object.create(Shape);
-    shape3.init(mycv2, 240, 180, 40, 5, '#333'); //2
+    shape3.init(mycv2, 240, 180, 40, 5, '#333', 'elem1', 0); //2
     var shape4 = Object.create(Shape);
-    shape4.init(mycv2, 275, 200, 5, 40, '#333'); //3
+    shape4.init(mycv2, 275, 200, 5, 40, '#333', 'elem2', 0); //3
     shapes.push(shape1);
     shapes.push(shape2);
     shapes.push(shape3);
@@ -131,6 +133,7 @@ let select = function (ev) {
                     let bb1 = this.getBoundingClientRect();    // yes
                     // other canvas as std object
                     // convert mouse coordinates to canvas coordinates
+                    
                     let x1 = (e.clientX - bb1.left) * (this.width / bb1.width);
                     let y1 = (e.clientY - bb1.top) * (this.height / bb1.height);
                     let obj = Object.create(Shape); // create new obj 
@@ -149,20 +152,37 @@ let select = function (ev) {
     }
 }
 
+function overlap() {
+
+};
+//pris
+let elementer = [ {
+    name: 'elem40',
+    pris: 3000,
+},
+              {
+    name: 'elem60',
+    pris: 6000,
+},
+              {
+    name: 'elem1',
+    pris: 0,
+},
+              {
+    name: 'elem2',
+    pris: 0,
+},
+];
+
+//se samlet pris
+function total() {
+   $('total').innerHTML = 'hej det her lort virker ikke';
+}
+
 let mycv1;
 let mycv2;
 let shapes = [];
 let othershapes = [];
+//let pris = elementer[shapes.name].pris;
 
 window.addEventListener('load', initialize);
-
-//pris
-//let elementer = [
-//    elem1: {
-//        pris: 3000,
-//        farve: 'beige'
-//    },
-//    elem2: {},
-//]
-
-//let pris = elementer[shapes[3].name].pris
