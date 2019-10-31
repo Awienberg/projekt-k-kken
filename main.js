@@ -10,18 +10,18 @@ var createNewCanvas = $("create");
 
 function createRoom() {
   
-
-let d1 = document.createElement('div'); // create table row in html
-let canvas1 = document.createElement('canvas'); // creates the table data
+let canvas = document.createElement('canvas'); // creates the table data
 let width = $("width").value;
 let height = $("height").value;
         
-d1.appendChild(canvas1); // input table content
-canvas1.setAttribute('id', 'myCanvas'); // input table data in to a row
-canvas1.setAttribute('width', width); // change varible
-canvas1.setAttribute('height', height);
-$('myCanvas1').appendChild(canvas1); // input to table in html file
-    
+canvas.setAttribute('id', 'myCanvas'); // input table data in to a row
+canvas.setAttribute('width', width); // change varible
+canvas.setAttribute('height', height);
+$('myCanvas1').appendChild(canvas); // input to table in html file
+//init myCanvas1
+mycv1 = $('myCanvas')
+mycv1 = Object.create(Canvas);
+mycv1.init('myCanvas', 'transparent');
 };
 
 function reset() {
@@ -82,7 +82,6 @@ let Shape = {
 //Create Canvas & Shapes
 let initialize = function () {
     // create canvas object
-    mycv1 = $('myCanvas');
     mycv2 = Object.create(Canvas);
     mycv2.init('myCanvas2', '#D8D8D8');
     mycv2.canvas.addEventListener('click', select);
@@ -156,3 +155,14 @@ let shapes = [];
 let othershapes = [];
 
 window.addEventListener('load', initialize);
+
+//pris
+//let elementer = [
+//    elem1: {
+//        pris: 3000,
+//        farve: 'beige'
+//    },
+//    elem2: {},
+//]
+
+//let pris = elementer[shapes[3].name].pris

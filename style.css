@@ -275,6 +275,7 @@ input[type="submit"] {
 
   #canvasSize { 
     padding: 30px 215px 0px 215px;
+    clear: both;
   }
 
   #myCanvas{
