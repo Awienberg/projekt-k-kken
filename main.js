@@ -10,14 +10,14 @@ var createNewCanvas = $("create");
 
 function createRoom() {
   
-let canvas = document.createElement('canvas'); // creates the table data
+let canvas = document.createElement('canvas'); // creates the canvas
 let width = $("width").value;
 let height = $("height").value;
         
-canvas.setAttribute('id', 'myCanvas'); // input table data in to a row
+canvas.setAttribute('id', 'myCanvas'); // Canvas id
 canvas.setAttribute('width', width); // change varible
 canvas.setAttribute('height', height);
-$('myCanvas1').appendChild(canvas); // input to table in html file
+$('myCanvas1').appendChild(canvas); // input to myCanvas1
 //init myCanvas1
 mycv1 = $('myCanvas')
 mycv1 = Object.create(Canvas);
@@ -127,7 +127,6 @@ let select = function (ev) {
         let x = (ev.clientX - bb.left) * (this.width / bb.width);
         let y = (ev.clientY - bb.top) * (this.height / bb.height);
         if (cx.isPointInPath(x, y)) {
-            // we're in a loop, is this array element the 
             // one we clicked? If yes click in other canvas
             mycv1.canvas.addEventListener('click', function placeInRoom(e) {
                     let bb1 = this.getBoundingClientRect();    // yes
